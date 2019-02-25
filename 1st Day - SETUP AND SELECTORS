@@ -46,10 +46,81 @@ The value of this attribute should be set to text/css.
 rel — this attribute describes the relationship between the HTML file and the CSS file. 
 Because you are linking to a stylesheet, the value should be set to stylesheet.
 
+<link href="https://www.codecademy.com/stylesheets/style.css" type="text/css" rel="stylesheet">
 
-
+<link href="./style.css" type="text/css" rel="stylesheet">
 
 - Tag Name
+
+CSS can select HTML elements by using an element's tag name. 
+A tag name is the word (or character) between HTML angle brackets.
+
+In HTML, the tag for a paragraph element is <p>. 
+
+The CSS syntax for selecting <p> elements is:
+
+p {
+
+}
+
+all paragraph elements will be selected using a CSS selector. 
+
+- Class Name
+
+HTML elements can also have attributes. One common attribute is the class attribute.
+It's also possible to select an element by its class attribute.
+
+For example, consider the following HTML:
+
+<p class="brand">Sole Shoe Company</p>
+
+To select this element using CSS, we could use the following CSS selector:
+
+.brand {
+
+}
+
+We'll see in a later exercise why using .title overrides the h1 selector.
+
+- Multiple Classes
+
+it's possible to add more than one class name to an HTML element's class attribute.
+
+
+You could write two CSS classes like so:
+
+.green {
+  color: green;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+Then, you could include both of these classes on one HTML element like this:
+
+<h1 class="green bold"> ... </h1>
+
+This enables us to mix and match CSS classes to create many unique styles without writing a custom class for every style combination needed.
+
+- ID Name
+
+If an HTML element needs to be styled uniquely (no matter what classes are applied to the element), we can add an ID to the element.
+
+<h1 id="large-title"> ... </h1>
+
+ CSS can select HTML elements by their id attribute. 
+ 
+ #large-title {
+
+}
+
+
+
+
+ 
+
+
 
 
 
