@@ -115,6 +115,118 @@ If an HTML element needs to be styled uniquely (no matter what classes are appli
 
 }
 
+- Classes and IDs
+
+CSS classes are meant to be reused over many elements. 
+By writing CSS classes, you can style elements in a variety of ways by mixing classes on HTML elements.
+
+ID is meant to style only one element. IDs override the styles of tags and classes, 
+they should be used sparingly and only on elements that need to always appear the same.
+
+- Specificity
+
+Specificity is the order by which the browser decides which CSS styles will be displayed. 
+A best practice in CSS is to style elements while using the lowest degree of specificity.
+IDs are the most specific selector in CSS, followed by classes, and finally, tags.
+
+- Chaining Selectors
+
+When writing CSS rules, it's possible to require an HTML element to have two or more CSS selectors at the same time.
+
+This is done by combining multiple selectors, which we will refer to as chaining. 
+
+if there was a .special class for h1 elements, the CSS would look like:
+
+h1.special {
+
+}
+
+The code above would select only the h1 elements that have a class of special. 
+If a p element also had a class of special, the rule in the example would not style the paragraph.
+
+- Nested Elements
+
+CSS also supports selecting elements that are nested within other HTML elements.
+
+<ul class='main-list'>
+  <li> ... </li>
+  <li> ... </li>
+  <li> ... </li>
+</ul>
+
+The nested <li> elements are selected with the following CSS:
+
+.main-list li {
+
+}
+
+.description h5 {
+  color: teal;
+}
+
+- Chaining and Specificity
+
+Adding more than one tag, class, or ID to a CSS selector increases the specificity of the CSS selector.
+
+For instance, consider the following CSS:
+
+p {
+  color: blue;
+}
+
+
+.main p {
+  color: red;
+}
+
+Both of these CSS rules define what a p element should look like. 
+Since .main p has a class and a p tag as its selector, only the p elements inside the .main element will appear red. 
+
+- Important
+
+There is one thing that is even more specific than IDs: !important. 
+
+!important can be applied to specific attributes instead of full rules. 
+It will override any style no matter how specific it is. 
+
+The syntax of !important in CSS looks like this:
+
+p {
+  color: blue !important;
+}
+
+
+.main p {
+  color: red;
+}
+
+all p elements will appear blue.
+
+- Multiple Selectors
+
+In order to make CSS more concise, it's possible to add CSS styles to multiple CSS selectors all at once. 
+This prevents writing repetitive code.
+
+the following code has repetitive style attributes:
+
+h1 {
+  font-family: Georgia;
+}
+
+.menu {
+  font-family: Georgia;
+}
+
+we can separate the selectors by a comma to apply the same style to both, like this:
+
+h1, 
+.menu {
+  font-family: Georgia;
+}
+
+
+
+
 
 
 
