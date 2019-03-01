@@ -225,15 +225,51 @@ h1,
 }
 
 
+- CSS Structure
+
+To style an HTML element using CSS, you need to write a CSS declaration inside the body of a CSS selector.
+
+h1 {
+  color: blue;
+}
+
+This line is referred to as a CSS declaration. CSS declarations consist of a property and a value.
+
+Property — the property you'd like to style of that element (i.e., size, color, etc.).
+
+Value — the value of the property (i.e., 18px for size, blue for color, etc.).
+
+- Font Family
+
+Font refers to the technical term typeface, or font family.
+
+To change the typeface of text on your web page, you can use the font-family property.
+
+h1 {
+  font-family: Garamond;
+}
 
 
+When setting typefaces on a web page, keep the following points in mind:
 
+1. The font specified in a stylesheet must be installed on a user's computer in order for that font to display when a user visits the web page.
+2. The default typeface for all HTML elements is Times New Roman. 
+3. It's a good practice to limit the number of typefaces used on a web page to 2 or 3. This helps the page load faster in some cases and is usually a good design decision.
+4. When the name of a typeface consists of more than one word, it's a best practice to enclose the typeface's name in quotes, like so:
 
+h1 {
+  font-family: "Courier New";
+}
 
- 
+- Font Size
 
+Often times, different sections of a web page are highlighted by modifying the font size.
 
+To change the size of text on your web page, you can use the font-size property.
 
+p {
+  font-size: 18px;
+}
 
 
 
