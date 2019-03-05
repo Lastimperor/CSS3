@@ -1,1 +1,88 @@
+- Introduction to the Box Model
+
+an important concept to understand how elements are positioned and displayed on a website.
+
+All elements on a web page are interpreted by the browser as "living" inside of a box. 
+This is what is meant by the box model.
+
+- The Box Model
+
+The box model comprises the set of properties which define parts of an element that take up space on a web page.
+
+The properties include:
+
+Width and height — specifies the width and height of the content area.
+Padding — specifies the amount of space between the content area and the border.
+Border — specifies the thickness and style of the border surrounding the content area and padding.
+Margin — specifies the amount of space between the border and the outside edge of the element.
+
+- Height and Width
+
+An element's content has two dimensions: a height and a width. 
+By default, the dimensions of an HTML box are set to hold the raw contents of the box.
+
+The CSS height and width properties can be used to modify these default dimensions.
+
+p {
+  height: 80px;
+  width: 240px;
+}
+
+
+- Borders
+
+A border is a line that surrounds an element, like a frame around a painting. 
+Borders can be set with a specific width, style, and color.
+
+width — The thickness of the border. 
+A border's thickness can be set in pixels or with one of the following keywords: thin, medium, or thick.
+
+style — The design of the border. 
+Web browsers can render any of 10 different styles. Some of these styles include: none, dotted, and solid.
+
+color — The color of the border. 
+Web browsers can render colors using a few different formats, including 140 built-in color keywords.
+
+p {
+  border: 3px solid coral;
+}
+
+The default border is medium none color, where color is the current color of the element.
+
+- Border Radius
+
+Thanks to CSS, a border doesn't have to be square.
+
+You can modify the corners of an element's border box with the border-radius property.
+
+div.container {
+  border: 3px solid rgb(22, 77, 100);
+  border-radius: 5px;
+}
+
+You can create a border that is a perfect circle by setting the radius equal to the height of the box, or to 100%.
+
+- Padding I
+
+The space between the contents of a box and the borders of a box is known as padding. 
+In CSS, you can modify this space with the padding property.
+
+p.content-header {
+  border: 3px solid coral;
+  padding: 10px;
+}
+
+The code in this example puts 10 pixels of space between the content of the paragraph (the text) and the borders, on all four sides.
+The padding property is often used to expand the background color and make content look less cramped.
+
+If you want to be more specific about the amount of padding on each side of a box's content, you can use the following properties:
+
+padding-top
+padding-right
+padding-bottom
+padding-left
+
+
+
+
 
