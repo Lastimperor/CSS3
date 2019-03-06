@@ -28,7 +28,6 @@ p {
   width: 240px;
 }
 
-
 - Borders
 
 A border is a line that surrounds an element, like a frame around a painting. 
@@ -81,6 +80,81 @@ padding-top
 padding-right
 padding-bottom
 padding-left
+
+- Padding II
+
+Another implementation of the padding property lets you specify exactly how much padding there should be on each side of the content in a single declaration.
+
+p.content-header {
+  border: 3px solid grey;
+  padding: 6px 11px 4px 9px;
+}
+
+In order, it specifies the amount of padding on the top (6 pixels), right (11 pixels), bottom (4 pixels), and left (9 pixels) sides of the content.
+
+When using this implementation of the padding property, we must specify a padding value for all four sides of the element.
+
+However, if the top and bottom values for padding will equal each other, and the left and right values for padding will also equal each other, 
+you can use the following shortcut:
+
+p.content-header {
+  padding: 5px 10px;
+}
+
+The first value, 5px, sets the padding value for the top and bottom sides of the content. 
+The second value, 10px, sets the padding value for the left and right sides of the content.
+
+- Margins I
+
+Margin refers to the space directly outside of the box. The margin property is used to specify the size of this space.
+
+p {
+  border: 1px solid aquamarine;
+  margin: 20px;
+}
+
+The code in the example above will place 20 pixels of space on the outside of the paragraph's box on all four sides. 
+This means that other HTML elements on the page cannot come within 20 pixels of the paragraph's border.
+
+If you want to be even more specific about the amount of margin on each side of a box, you can use the following properties:
+
+margin-top
+margin-right
+margin-bottom
+margin-left
+
+- Margins II
+
+A similar implementation of the margin property is used to specify exactly how much margin there should be on each side of the box in a single declaration.
+
+p {
+  margin: 6px 10px 5px 12px;
+}
+
+In order, it specifies the amount of margin on the top (6 pixels), right (10 pixels), bottom (5 pixels), and left (12 pixels) sides of the box.
+
+when you're certain that the top and bottom values for margin will equal each other, and that the left and right values for margin will also equal each other, 
+you can use the following shortcut:
+
+p {
+  margin: 6px 12px;
+}
+
+- Auto
+
+The margin property also lets you center content. However, you must follow a few syntax requirements
+
+In order to center an element, a width must be set for that element. 
+Otherwise, the width of the div will be automatically set to the full width of its containing element, like the <body>, for example. 
+It's not possible to center an element that takes up the full width of the page.
+
+div.headline {
+  width: 400px;
+  margin: 0 auto;
+}
+
+ The 0 sets the top and bottom margins to 0 pixels. 
+ The auto value instructs the browser to adjust the left and right margins until the element is centered within its containing element.
 
 
 
