@@ -155,6 +155,119 @@ div.headline {
 
  The 0 sets the top and bottom margins to 0 pixels. 
  The auto value instructs the browser to adjust the left and right margins until the element is centered within its containing element.
+ 
+ 
+ - Margin Collapse
+ 
+ As you have seen, padding is space added inside an element's border, while margin is space added outside an element's border. 
+ One additional difference is that top and bottom margins, also called vertical margins, collapse, while top and bottom padding does not.
+ 
+ Horizontal margins (left and right), like padding, are always displayed and added together. 
+ For example, if two divs with ids #div-one and #div-two, are next to each other, 
+ they will be as far apart as the sum of their adjacent margins.
+
+#img-one {
+  margin-right: 20px;
+}
+
+#img-two {
+  margin-left: 20px;
+}
+In this example, the space between the #img-one and #img-two borders is 40 pixels.
+
+Unlike horizontal margins, vertical margins do not add. Instead, the larger of the two vertical margins sets the distance between adjacent elements.
+
+#img-one {
+  margin-bottom: 30px;
+}
+
+#img-two {
+  margin-top: 20px;
+}
+In this example, the vertical margin between the #img-one and #img-two elements is 30 pixels.
+
+- Minimum and Maximum Height and Width
+
+Because a web page can be viewed through displays of differing screen size, the content on the web page can suffer from those changes in size. 
+To avoid this problem, CSS offers two properties that can limit how narrow or how wide an element's box can be sized to.
+
+min-width — this property ensures a minimum width of an element's box.
+max-width — this property ensures a maximum width of an element's box.
+
+p {
+  min-width: 300px;
+  max-width: 600px;
+}
+
+You can also limit the minimum and maximum height of an element.
+
+min-height — this property ensures a minimum height for an element's box.
+max-height — this property ensures a maximum height of an element's box.
+
+p {
+  min-height: 150px;
+  max-height: 300px;
+}
+
+- Overflow
+
+The overflow property controls what happens to content that spills, or overflows, outside its box. 
+It can be set to one of the following values:
+
+hidden - when set to this value, any content that overflows will be hidden from view.
+scroll - when set to this value, a scrollbar will be added to the element's box so that the rest of the content can be viewed by scrolling.
+visible - when set to this value, the overflow content will be displayed outside of the containing element. Note, this is the default value.
+
+p {
+  overflow: scroll; 
+}
+
+- Resetting Defaults 
+
+All major web browsers have a default stylesheet they use in the absence of an external stylesheet.
+
+User agent stylesheets often have default CSS rules that set default values for padding and margin.
+
+Many developers choose to reset these default values so that they can truly work with a clean slate.
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+The code in the example above resets the default margin and padding values of all HTML elements. 
+It is often the first CSS rule in an external stylesheet.
+
+- Visibility
+
+Elements can be hidden from view with the visibility property.
+
+The visibility property can be set to one of the following values:
+
+hidden — hides an element.
+visible — displays an element.
+
+<ul>
+  <li>Explore</li>
+  <li>Connect</li>
+  <li class="future">Donate</li>
+<ul>
+.future {
+  visibility: hidden;
+}
+
+In the example above, the list item with a class of future will be hidden from view in the browser.
+
+he web page will only hide the contents of the element. It will still leave an empty space where the element is intended to display.
+
+Note: What's the difference between display: none and visibility: hidden? 
+An element with display: none will be completely removed from the web page. 
+An element with visibility: hidden, however, will not be visible on the web page, but the space reserved for it will.
+
+
+
+
+
 
 
 
