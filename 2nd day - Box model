@@ -267,8 +267,64 @@ An element with visibility: hidden, however, will not be visible on the web page
 
 
 
+- Box Model: Content-Box
 
+<h1>Hello World</h1>
 
+h1 {
+  border: 1px solid black;
+  height: 200px;
+  width: 300px;
+  padding: 10px;
+}
+
+In CSS, the box-sizing property controls the type of box model the browser should use when interpreting a web page.
+
+The default value of this property is content-box. This is the same box model that is affected by border thickness and padding.
+
+width + padding + border = actual rendered width of an element's box
+
+content width = 158px
+left border = 1px
+right border = 1px
+left padding = 20px
+right padding = 20px
+
+actual rendered width of an element's box = 200px
+
+The border thickness and padding would remain entirely outside of the box.
+
+- Box Model: Border-Box
+
+Fortunately, we can reset the entire box model and specify a new one: border-box.
+
+* {
+  box-sizing: border-box;
+}
+
+the universal selector (*) targets all elements on the web page and sets their box model to the border-box model.
+
+ex
+
+content width = x
+left border = 1px
+right border = 1px
+left padding = 20px
+right padding = 20px
+width = 200px
+
+content width = width - border - padding = 158px
+
+<h1>Hello World</h1>
+
+h1 {
+  border: 1px solid black;
+  height: 200px;
+  width: 300px;
+  padding: 10px;
+}
+
+The border thickness and padding would remain entirely inside of the box.
 
 
 
