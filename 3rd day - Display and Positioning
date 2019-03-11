@@ -1,0 +1,77 @@
+- Flow of HTML
+
+A browser will render the elements of an HTML document that has no CSS from left to right, top to bottom, in the same order as they exist in the document. 
+This is called the flow of elements in HTML.
+
+CSS includes properties that change how a browser positions elements.
+
+five properties for adjusting the position of HTML elements in the browser:
+
+position
+display
+z-index
+float
+clear
+
+- Position
+
+The default position of an element can be changed by setting its position property. The position property can take one of four values:
+
+static - the default value (it does not need to be specified)
+relative
+absolute
+fixed
+
+- Position: Relative
+
+This value allows you to position an element relative to its default static position on the web page.
+
+.box-bottom {
+  background-color: DeepSkyBlue;
+  position: relative;
+}
+
+This is not enough, I need to specify the valid offset properties:
+
+top - moves the element down.
+bottom - moves the element up.
+left - moves the element right.
+right - moves the element left.
+
+Units for offset properties can be specified in pixels, ems, or percentages. 
+Note that offset properties will not work if the value of the element's position property is the default static.
+
+- Position: Absolute
+
+When an element's position is set to absolute all other elements on the page will ignore the element and act like it is not present on the page. 
+The element will be positioned relative to its closest positioned parent element.
+
+.box-bottom {
+  background-color: DeepSkyBlue;
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+
+- Position: Fixed
+
+We can fix an element to a specific position on the page (regardless of user scrolling) by setting its position to fixed.
+Like in some advertising banner.
+
+.box-bottom {
+  background-color: DeepSkyBlue;
+  position: fixed;
+  top: 20px;
+  left: 50px;
+}
+
+Combine fixed and relative position, I can hide a box under an other. 
+The box hidden (fixed) is shown when I scroll down the page while the other (relative) cover it.
+
+- Z-Index
+
+
+
+
+
+
