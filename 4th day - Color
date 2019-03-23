@@ -1,2 +1,104 @@
 - Introduction to Color
 
+Colors in CSS can be described in three different ways:
+
+Named colors — English words that describe colors, also called keyword colors, like blue, black, and LimeGreen.
+RGB — numeric values that describe a mix of red, green, and blue
+HSL — numeric values that describe a mix of hue, saturation, and lightness
+
+- Foreground vs Background
+
+Color can affect the following design aspects:
+
+The foreground color
+The background color
+
+Foreground color is the color that an element appears in. 
+
+In CSS, these two design aspects can be styled with the following two properties:
+
+color - this property styles an element’s foreground color.
+background-color - this property styles an element’s background color.
+
+h1 {
+  color: Red;
+  background-color: Blue;
+}
+
+- Hexadecimal
+
+Colors specified using this system are called hex colors. A hex color begins with a hash character (#) which is followed by three or six characters. The characters represent values for red, blue and green.
+
+DarkSeaGreen: #8FBC8F
+Sienna:       #A0522D
+SaddleBrown:  #8B4513
+Brown:        #A52A2A
+Black:        #000000 or #000
+White:        #FFFFFF or #FFF
+Aqua:         #00FFFF or #0FF
+
+In the example above, you may notice that there are both letters and numbers in the values. 
+This is because the hexadecimal number system has 16 digits (0-15) instead of 10 (0-9) like you are used to. 
+To represent 10-15, we use A-F.
+
+- RGB Colors
+
+There is another syntax for representing RGB values that uses decimal numbers. It looks like this:
+
+h1 {
+  color: rgb(23, 45, 23);
+}
+
+he first number represents the amount of red, the second is green, and the third is blue. 
+
+- Hex and RGB
+
+In both hex and decimal, we have three values, one for each color. 
+Each can be one of 256 values. 
+Specifically, 256 * 256 * 256 = 16,777,216. 
+That is the amount of colors we can now represent. Compare that to the 147 named CSS colors!
+
+- Hue, Saturation, and Lightness
+
+There’s another equally powerful system in CSS called the hue-saturation-lightness color scheme, abbreviated as HSL.
+
+The syntax for HSL is similar to the decimal form of RGB, though it differs in important ways. 
+The first number represents the degree of the hue, and can be between 0 and 360. 
+The second and third numbers are percentages representing saturation and lightness respectively. Here is an example:
+
+color: hsl(120, 60%, 70%);
+
+Hue is the first number. It refers to an angle on a color wheel. 
+Red is 0 degrees, Green is 120 degrees, Blue is 240 degrees, and then back to Red at 360. 
+
+Saturation refers to the intensity or purity of the color.
+Lightness refers to how light or dark the color is.
+
+- Opacity and Alpha
+
+When we overlap two opaque elements, nothing from the bottom element shows through the top element.
+
+To use opacity in the HSL color scheme, use hsla instead of hsl, and four values instead of three. For example:
+
+color: hsla(34, 100%, 50%, 0.1);
+
+The first three values work the same as hsl. The fourth value (which we have not seen before) is the alpha. 
+This last value is sometimes called the opacity.
+
+Alpha is a decimal number from zero to one. If alpha is zero, the color will be completely transparent. 
+If alpha is one, the color will be opaque. The value for half transparent would be 0.5.
+
+The RGB color scheme has a similar syntax for opacity, rgba. 
+Again, the first three values work the same as rgb and the last value is the alpha. Here’s an example:
+
+color: rgba(234, 45, 98, 0.33);
+
+Alpha can only be used with HSL and RGB colors; we cannot add the alpha value to color: green color: #FFFFF.
+
+There is, however, a named color keyword for zero opacity, transparent. 
+It’s equivalent to rgba(0, 0, 0, 0). It’s used like any other color keyword:
+
+color: transparent;
+
+
+
