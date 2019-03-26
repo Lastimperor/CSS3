@@ -105,6 +105,81 @@ Like word spacing, it’s not common to increase the kerning in text, but someti
 
 - Text Transformation
 
+Text can also be styled to appear in either all uppercase or lowercase with the text-transform property.
+
+h1 {
+  text-transform: uppercase;
+}
+
+- Text Alignment
+
+No matter how much styling is applied to text (typeface, size, weight, etc.), text always appears on the left side of the browser.
+
+To move, or align, text, we can use the text-align property.
+
+h1 {
+  text-align: right;
+}
+
+The text-align property can be set to one of the following three values:
+
+left - aligns text to the left hand side of the browser.
+center - centers text.
+right - aligns text to the right hand side of the browser.
+
+- Line Height Anatomy
+
+Another property that we can set for text is line-height. This property modifies the leading of text.
+
+line height = leading + font size
+
+- Line Height
+
+We can use the line-height property to set how tall we want the line containing our text to be, regardless of the height of the text. 
+Line heights can take one of several values:
+
+A unitless number, such as 1.2. This number is an absolute value that will compute the line height as a ratio of the font size.
+A number specified by unit, such as 12px. This number can be any valid CSS unit, such as pixels, percents, ems, or rems.
+Generally, the unitless ratio value is the preferred method, since it is responsive and based exclusively on the current font size. 
+
+if we change the font size, a unitless line-height would automatically readjust, whereas the pixel value would remain static.
+
+p {
+  line-height: 1.4;
+}
+
+- Serif and Sans Serif
+
+Serif — fonts that have extra details on the ends of each letter. 
+Examples include fonts like Times New Roman or Georgia, among others.
+
+Sans-Serif — fonts that do not have extra details on the ends of each letter. 
+Instead, letters have straight, flat edges, like Arial or Helvetica.
+
+- Fallback Fonts
+
+Most computers have a small set of typefaces pre-installed. 
+This small set includes serif fonts like Times New Roman and sans-serif fonts like Arial.
+
+These pre-installed fonts serve as fallback fonts if the stylesheet specifies a font which is not installed on a user’s computer.
+
+To use fallback fonts, the following syntax is required:
+
+h1 {
+  font-family: "Garamond", "Times", serif;
+}
+
+The CSS rule above says:
+
+Use the Garamond font for all <h1> elements on the web page.
+If Garamond is not available, use the Times font.
+If Garamond and Times are not available, use any serif font pre-installed on the user’s computer.
+
+- Linking Fonts I
+
+
+
+
 
 
 
