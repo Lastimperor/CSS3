@@ -177,28 +177,74 @@ If Garamond and Times are not available, use any serif font pre-installed on the
 
 - Linking Fonts I
 
+New fonts are often centralized in directories made available for public use. We refer to these fonts as non-user fonts.
 
+Google Fonts is one such directory of thousands of open-source fonts, available for free use. 
+Google Fonts gives a way to retrieve the link for a single and multiple fonts, or multiple fonts with the font-weight and font-style properties.
 
+- Linking Fonts II
 
+When we have the link to the font of our choice, we can add the font to the <head> section of the HTML document, using the <link> tag and the href.
 
+Let’s take a look at a few examples:
 
+1. A single linked font, using Droid Serif as an example:
 
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif" type="text/css" rel="stylesheet">
+</head>
 
+2. Multiple linked fonts, using the Droid Serif and Playfair Display fonts as an example:
 
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Playfair+Display" type="text/css" rel="stylesheet">
+</head>
 
+3. Multiple linked fonts, along with weights and styles. Here Droid Serif has font weights of 400, 700, and 700i, while Playfair Display has font weights of 400, 700, and 900i:
 
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,700i|Playfair+Display:400,700,900i" rel="stylesheet">
+</head>
 
+Once a font is linked, we can create CSS selectors to target elements, just as we do with other fonts.
 
+- Font-Face I
 
+There are other ways to link non-user fonts that don’t require the use of the <link> tag in the HTML document. 
+CSS offers a way to import fonts directly into stylesheets with the @font-face property.
 
+To load fonts with the @font-face property:
 
+1) Instead of using the font’s link in the HTML document, enter the link into the URL bar in the browser.
+2) The browser will load the CSS rules. You will need to focus on the rules that are directly labeled as /* latin */. 
+   Some of the latin rules are on separate lines. You will need each of these.
+   https://fonts.googleapis.com/css?family=Space+Mono:400,700 here, the /* latn */ section are two.
+3) Copy each of the CSS rules labeled latin, and paste the rules from the browser to the top of style.css.
 
+It is important to stress the need to copy the @font-face rules to the top of the stylesheet for the font to load correctly in the project.
 
+We can modify our @font-face rule to use local font files as well. 
+We can supply the user with the desired font family and host it along with our site instead of depending on a different site.
 
+@font-face {
+  font-family: "Roboto";
+  src: url(fonts/Roboto.woff2) format('woff2'),
+       url(fonts/Roboto.woff) format('woff'),
+       url(fonts/Roboto.tff) format('truetype');
+}
 
+- Font-Face II
 
+Here, you’ll notice:
 
+The main difference is the use of a relative filepath instead of a web URL.
 
+We add a format for each file to specify which font to use. 
+Different browsers support different font types, so providing multiple font file options will support more browsers.
+
+As of now .woff2 appears to be the way of the future, due to greatly reduced file sizes and improved performance, 
+but many browsers still don’t support it.
+There are lots of great sources to find fonts to use locally, such as Font Squirrel.
 
 
 
