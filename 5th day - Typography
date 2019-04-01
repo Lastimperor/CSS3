@@ -208,6 +208,14 @@ Let’s take a look at a few examples:
 
 Once a font is linked, we can create CSS selectors to target elements, just as we do with other fonts.
 
+- Linking Fonts III
+
+Check min.10 https://www.youtube.com/watch?v=jaVNP3nIAv0
+
+In a css file I can write:
+
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,700,700i')
+
 - Font-Face I
 
 There are other ways to link non-user fonts that don’t require the use of the <link> tag in the HTML document. 
@@ -245,6 +253,8 @@ Different browsers support different font types, so providing multiple font file
 As of now .woff2 appears to be the way of the future, due to greatly reduced file sizes and improved performance, 
 but many browsers still don’t support it.
 There are lots of great sources to find fonts to use locally, such as Font Squirrel.
+
+
 
 
 
